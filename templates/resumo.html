@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Resumo Financeiro</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <h1>Resumo Financeiro</h1>
+
+    <div class="card">
+
+        <h3>Minha Renda</h3>
+
+        <p>R$ {{ renda }}</p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Total de Gastos</h3>
+
+        <p>R$ {{ total }}</p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>Saldo Atual</h3>
+
+        <p>R$ {{ saldo }}</p>
+
+    </div>
+
+    <h2>Lista de Gastos</h2>
+
+    {% if gastos %}
+
+        <table>
+
+            <tr>
+
+                <th>Descrição</th>
+
+                <th>Categoria</th>
+
+                <th>Valor</th>
+
+            </tr>
+
+            {% for gasto in gastos %}
+
+            <tr>
+
+                <td>{{ gasto.descricao }}</td>
+
+                <td>{{ gasto.categoria }}</td>
+
+                <td>R$ {{ gasto.valor }}</td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    {% else %}
+
+        <p>Nenhum gasto cadastrado.</p>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/">
+
+        <button>
+
+            Voltar ao Menu
+
+        </button>
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

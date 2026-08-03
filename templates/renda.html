@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Minha Renda</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <h1>Minha Renda</h1>
+
+    <form method="POST">
+
+        <label>Informe sua renda mensal</label>
+
+        <input
+            type="number"
+            name="renda"
+            step="0.01"
+            required
+        >
+
+        <br><br>
+
+        <button type="submit">
+            Salvar
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/">
+        <button>Voltar</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>

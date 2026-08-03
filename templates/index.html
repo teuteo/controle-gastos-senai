@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Controle Financeiro</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="lado-esquerdo">
+
+        <h1>
+
+            CONTROLE <br>
+
+            FINANCEIRO
+
+        </h1>
+
+    </div>
+
+
+    <div class="centro">
+
+        <!-- Logo -->
+
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+
+    </div>
+
+
+    <div class="lado-direito">
+
+        <a href="/renda">
+
+            <button>
+
+                Minha Renda
+
+            </button>
+
+        </a>
+
+
+        <a href="/adicionar">
+
+            <button>
+
+                Adicionar Gastos
+
+            </button>
+
+        </a>
+
+
+        <a href="/resumo">
+
+            <button>
+
+                Resumo Financeiro
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
